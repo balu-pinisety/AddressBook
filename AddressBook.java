@@ -18,14 +18,16 @@ public class AddressBook {
 		// Calling method to add details of the person
 		boolean choice=true;
 		while (choice) {
-			System.out.println("\nChoose the option:\nPress '1' for Add\nPress '2' for Edit\nPress '3' for Exit");
+			System.out.println("\nChoose the option:\nPress '1' for Add\nPress '2' for Edit\nPress '3' for Delete\nPress '4' for Exit");
 			int option=scan.nextInt();
 			switch (option) {
 			case 1: addressBook.addDetails();
 				break;
 			case 2: addressBook.editDetails();
 				break;
-			case 3: choice=false;
+			case 3: addressBook.deleteDetails();
+				break;
+			case 4: choice=false;
 				System.out.println("Exited out of AddressBook");
 				break;
 			default: 
@@ -135,5 +137,14 @@ public class AddressBook {
 			}
 		}
 		System.out.println("After Updating"+details.getDetails());
+	}
+	
+	/** Asks the user to delete existing details using the name of the person */
+	private void deleteDetails() {
+		addressBook.displayContacts();//To display contacts
+		System.out.print("\nChoose the number from above list that to be Delete: ");
+		int number = scan.nextInt();
+		personList.remove(number-1);
+		System.out.println("Selected details were deleted from the list");
 	}
 }
