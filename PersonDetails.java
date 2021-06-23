@@ -84,14 +84,13 @@ public class PersonDetails {
 	/** @return Person details which was given  by user */
 	public String getDetails(){
         return "\nPerson Details - "+firstName+" "+lastName+"\n"+
-        		"  First Name   : "+firstName+"\n"+
-        		"  Last Name    : "+lastName+"\n"+
-                "  Address      : "+address+"\n"+
-                "  City         : "+city+"\n"+
-                "  State        : "+state+"\n"+
-                "  Zip Code     : "+zipCode+"\n"+
-                "  Phone Number : "+phoneNumber+"\n"+
-                "  E-mail ID    : "+email+"\n";
-	}
-	
+        		"1) First Name   : "+firstName+"\n"+
+        		"2) Last Name    : "+lastName+"\n"+
+                "3) Address      : "+address+"\n"+
+                "4) City         : "+city+"\n"+
+                "5) State        : "+state+"\n"+
+                "6) Zip Code     : "+zipCode+"\n"+
+                "7) Phone Number : "+phoneNumber+"\n"+
+                "8) E-mail ID    : "+email+"\n";
+	}	
 }
