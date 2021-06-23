@@ -18,7 +18,7 @@ public class AddressBook {
 		// Calling method to add details of the person
 		boolean choice=true;
 		while (choice) {
-			System.out.println("\nChoose the option:\nPress '1' for Add\nPress '2' for Edit\nPress '3' for Delete\nPress '4' for Exit");
+			System.out.println("\nChoose the option for person details:\nPress '1' for Add\nPress '2' for Edit\nPress '3' for Delete\nPress '4' for Show\nPress '5' for Exit");
 			int option=scan.nextInt();
 			switch (option) {
 			case 1: addressBook.addDetails();
@@ -27,7 +27,9 @@ public class AddressBook {
 				break;
 			case 3: addressBook.deleteDetails();
 				break;
-			case 4: choice=false;
+			case 4: addressBook.displayContacts();
+				break;
+			case 5: choice=false;
 				System.out.println("Exited out of AddressBook");
 				break;
 			default: 
