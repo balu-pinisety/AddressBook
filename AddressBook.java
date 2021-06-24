@@ -27,7 +27,7 @@ public class AddressBook {
 				break;
 			case 3: addressBook.deleteDetails();
 				break;
-			case 4: addressBook.displayContacts();
+			case 4: addressBook.showDetails();
 				break;
 			case 5: choice=false;
 				System.out.println("Exited out of AddressBook");
@@ -148,5 +148,13 @@ public class AddressBook {
 		int number = scan.nextInt();
 		personList.remove(number-1);
 		System.out.println("Selected details were deleted from the list");
+	}
+	
+	private void showDetails() {
+		addressBook.displayContacts();//To display contacts
+		System.out.print("Choose the number from above list to see details: ");
+		int number = scan.nextInt();
+		PersonDetails details = personList.get(number-1);
+		System.out.println(details.getDetails());
 	}
 }
