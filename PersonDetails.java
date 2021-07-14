@@ -12,8 +12,8 @@ public class PersonDetails {
     private String city;
     private String state;
     private String email;
-    private int zipCode;
-    private long phoneNumber;
+    private String zipCode;
+    private String phoneNumber;
 
 	/** Gets the data from User and Setting it to variables */
     public String getFirstName() {
@@ -64,19 +64,19 @@ public class PersonDetails {
 		this.email = email;
 	}
 
-	public int getZipCode() {
+	public String getZipCode() {
 		return zipCode;
 	}
 
-	public void setZipCode(int zipCode) {
+	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
 
-	public long getPhoneNumber() {
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
-	public void setPhoneNumber(long phoneNumber) {
+	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
 	
